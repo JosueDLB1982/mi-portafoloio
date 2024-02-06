@@ -1,15 +1,19 @@
-/* :root {
+:root {
     --color: rgb(15, 13, 13);
     --bg-color-body: rgb(255, 255, 255, 0.85);
     --bg-color: rgb(125, 125, 125);
     --bg-color-card: rgb(127, 127 ,127);
-} */
+}
 
-:root {
-    --color: rgb(255, 255, 255);
-    --bg-color-body: rgba(112,116,119,255);
-    --bg-color: rgb(34, 34, 34);
-    --bg-color-card: rgb(17, 17, 17);
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color: rgb(255, 255, 255);
+        --bg-color-body: rgba(112,116,119,255);
+        --bg-color: rgb(34, 34, 34);
+        --bg-color-card: rgb(17, 17, 17);
+        color-scheme: dark;
+    }
 }
 
 *,
@@ -50,6 +54,10 @@ body {
     width: 100%;
     min-height: 100vh;
     font-family: "Cinzel Decorative", sans-serif;
+}
+
+form {
+    color-scheme: light;
 }
 
 .header,
