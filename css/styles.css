@@ -401,15 +401,45 @@ form {
     justify-content: space-between;
     padding: 0 5px;
     font-size: 1.5vw;
+    position: relative;
 }
 
-.menu-item-desktop:hover {
+/* .menu-item-desktop:hover {
     border-bottom: 2px solid var(--color);
     border-radius: 5px;
+} */
+
+/* .menu-item-desktop {
+    transition: border-bottom 0.3s ease-in-out;
+} */
+
+.menu-item-desktop::before {
+    content: '';
+    position: absolute;
+    border-radius: 7px;
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    z-index: -1;
 }
 
-.menu-item-desktop {
-    transition: border-bottom 0.3s ease-in-out;
+.menu-item-desktop:hover::before {
+    animation: fill 1s forwards;
+}
+
+@keyframes fill {
+    0% {width: 0%;}
+    50% {
+        width: 100%;
+        height: 2px;
+    }
+    100% {
+        width: 100%;
+        height: 116%;
+        background: var(--bg-color-card);
+    }
 }
 
 .container-contact {
