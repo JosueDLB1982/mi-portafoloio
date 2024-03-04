@@ -275,29 +275,47 @@ form {
     align-items: center;
 }
 
+.legend {
+    margin-bottom: 20px;
+    padding: 0 5px;
+}
+
 .fieldset {
     width: 100%;
-    text-align: center;
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    border: 2px solid var(--color);
 }
 
 .contact-field {
     padding: 10px;
+    position: relative;
 }
 
 .label {
     display: inline-block;
     width: 100%;
     margin-bottom: 5px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    transition: translate 250ms;
 }
 
 .input {
     width: 100%;
     padding: 8px;
+    border: 1px solid var(--color);
     border-radius: 10px;
-    background-color: rgb(245, 245, 245, 0.95);
+    background-color: transparent;
+    color: var(--color);
+    margin-bottom: 20px;
+}
+
+.contact-field:focus-within label,
+.contact-field:not(:has(:placeholder-shown)) label {
+    translate: 0 -2rem;
 }
 
 .contact-btn {
@@ -399,6 +417,7 @@ form {
 .menu-item-desktop {
     color: inherit;
     justify-content: space-between;
+    padding: 2px 4px;
     margin-right: 0.8vh;
     font-size: 1.5vw;
     position: relative;
