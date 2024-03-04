@@ -28,6 +28,8 @@
     scroll-behavior: smooth;
 } */
 
+
+
 ul, a {
     margin: 0;
     padding: 0;
@@ -353,6 +355,7 @@ form {
     align-items: center;
     padding: 10px;
     margin: 10px;
+    margin-bottom: 18px;
     background-color: var(--bg-color-card);
     border-radius: 15px;
     box-shadow: 1px 1px 1px var(--color)
